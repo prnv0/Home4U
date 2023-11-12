@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Heading from "../../common/Heading"
 import DropdownList from "react-widgets/DropdownList";
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 import "react-widgets/styles.css";
 import "./hero.css"
 
@@ -43,11 +45,12 @@ const Hero = () => {
               <>
                 <div className='box'>
                   <span>Price Range</span>
-                  <input type='text' placeholder='Field 1' />
+                  <Box sx={{ width: 500 }}></Box>
+                  <Slider size="small" defaultValue={3500000} aria-label="Small" valueLabelDisplay="auto" max={50000000}/>
                 </div>
                 <div className='box'>
                   <span>Bedrooms</span>
-                  <DropdownList defaultValue="2BHK" data={["1BHK", "2BHK", "3BHK", "4BHK"]}/>
+                  <DropdownList defaultValue="2BHK" data={["1BHK", "2BHK", "3BHK", "4BHK", "5BHK+"]}/>
                 </div>
               </>
             )}
